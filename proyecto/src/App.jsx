@@ -2,6 +2,7 @@ import GameFeed from "./components/GameFeed";
 import Header from "./components/header";
 import { AuthProvider } from "./components/AuthContext";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <GameFeed />
           </main>
         </div>
-
+      {/* Footer - Andres Sanchez */}
+      <Footer />
       </div>
     </AuthProvider>
   );

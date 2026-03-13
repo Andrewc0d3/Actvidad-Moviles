@@ -1,0 +1,76 @@
+/* Estilo general del footer */
+.footer{
+  background-color:#1a1a1a;
+  color:white;
+  margin-top:40px;
+}
+
+/* Contenedor principal */
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+}
+
+/* Marca del sitio */
+.footer-brand h2{
+  margin-bottom:10px;
+}
+
+.footer-brand p{
+  color:#bdbdbd;
+  font-size:14px;
+}
+
+/* Secciones de enlaces */
+.footer-links h4{
+  margin-bottom:10px;
+}
+
+.footer-links ul{
+  list-style:none;
+  padding:0;
+}
+
+.footer-links li{
+  margin-bottom:6px;
+}
+
+.footer-links a{
+  color:#cfcfcf;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* Hover en enlaces */
+.footer-links a:hover{
+  color:white;
+}
+
+/* Redes sociales */
+.footer-social h4{
+  margin-bottom:10px;
+}
+
+.social-icons{
+  display:flex;
+  gap:10px;
+}
+
+.social-icons a{
+  font-size:20px;
+  text-decoration:none;
+}
+
+/* Parte inferior del footer */
+.footer-bottom{
+  border-top:1px solid #333;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+  color:#bdbdbd;
+}
