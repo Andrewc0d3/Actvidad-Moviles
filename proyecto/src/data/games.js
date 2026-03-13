@@ -13,6 +13,7 @@ export const featuredGames = [
     players: 24,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const featuredGames = [
     players: 4,
     isNew: false,
     isMultiplayer: true,
+    componente: "Domino",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const featuredGames = [
     players: 89,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ export const featuredGames = [
     players: 15,
     isNew: false,
     isMultiplayer: false,
+    componente: "Domino",
   },
 ];
 
@@ -49,6 +53,7 @@ export const featuredGames2 = [
     players: 7,
     isNew: false,
     isMultiplayer: true,
+    componente: "Domino",
   },
   {
     id: 6,
@@ -57,6 +62,7 @@ export const featuredGames2 = [
     players: 33,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 7,
@@ -65,6 +71,7 @@ export const featuredGames2 = [
     players: 12,
     isNew: false,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ export const featuredGames2 = [
     players: 5,
     isNew: false,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 9,
@@ -81,6 +89,7 @@ export const featuredGames2 = [
     players: 41,
     isNew: false,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 10,
@@ -89,6 +98,7 @@ export const featuredGames2 = [
     players: 19,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 11,
@@ -97,6 +107,7 @@ export const featuredGames2 = [
     players: 28,
     isNew: false,
     isMultiplayer: false,
+    componente: "Domino",
   },
 ];
 
@@ -109,6 +120,7 @@ export const newGames = [
     players: 12,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 13,
@@ -117,6 +129,7 @@ export const newGames = [
     players: 4,
     isNew: true,
     isMultiplayer: true,
+    componente: "Domino",
   },
   {
     id: 14,
@@ -125,6 +138,7 @@ export const newGames = [
     players: 29,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 15,
@@ -133,6 +147,7 @@ export const newGames = [
     players: 0,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 16,
@@ -141,6 +156,7 @@ export const newGames = [
     players: 4,
     isNew: true,
     isMultiplayer: true,
+    componente: "Domino",
   },
   {
     id: 17,
@@ -149,6 +165,7 @@ export const newGames = [
     players: 9,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 18,
@@ -157,6 +174,7 @@ export const newGames = [
     players: 17,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 19,
@@ -165,6 +183,7 @@ export const newGames = [
     players: 22,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 20,
@@ -173,6 +192,7 @@ export const newGames = [
     players: 6,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
   {
     id: 21,
@@ -181,5 +201,6 @@ export const newGames = [
     players: 31,
     isNew: true,
     isMultiplayer: false,
+    componente: "Domino",
   },
 ];

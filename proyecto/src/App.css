@@ -1,69 +1,3 @@
-#root {
-  width: 100%;
-  min-height: 100vh;
-}
-
-.app-container {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  flex-direction: column;
-}
-
-.app-header {
-  text-align: center;
-  color: white;
-  padding: 40px 20px 30px;
-}
-
-.app-header h1 {
-  font-size: 2.5rem;
-  margin: 0 0 10px 0;
-  font-weight: 700;
-}
-
-.subtitle {
-  margin: 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-.app-main {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.search-section {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-.results-section,
-.info-section {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
 /* ============================================
    APP.CSS — Estilos globales y del feed
    Inspirado en la página de mini juegos original
@@ -109,25 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 70px; /* espacio para el header fijo */
-}
-
-/* Placeholder del header (Jesús lo reemplaza) */
-.app__header-placeholder {
-  height: var(--header-height);
-  background-color: #222236;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-size: 13px;
-  border-bottom: 1px solid #333355;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  width: 100%;
+  padding-top: 56px; /* espacio para el header fijo */
 }
 
 /* Cuerpo: sidebar + main */
@@ -135,25 +51,6 @@ body {
   display: flex;
   flex: 1;
   position: relative;
-  margin-top: 0;
-}
-
-/* Placeholder de la sidebar (Jesús lo reemplaza) */
-.app__sidebar-placeholder {
-  width: var(--sidebar-width);
-  background-color: #1c1c30;
-  border-right: 1px solid #333355;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 16px;
-  color: var(--color-text-muted);
-  font-size: 10px;
-  text-align: center;
-  writing-mode: vertical-rl;
-  flex-shrink: 0;
-  min-height: 100%;
-  overflow-y: auto;
 }
 
 /* Área principal del feed */
@@ -171,7 +68,6 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
-  
 }
 
 /* ============================================
@@ -205,7 +101,7 @@ body {
    ============================================ */
 
 .feed__new-games {
-   padding: 20px 16px;
+  padding: 20px 16px;
   background-color: var(--color-bg);
   max-width: 1200px;
   margin: 0 auto;
@@ -246,7 +142,7 @@ body {
   color: var(--color-text);
 }
 
-/* Contador de juegos nuevos (esquina derecha) */
+/* Contador de juegos nuevos */
 .feed__section-count {
   display: flex;
   align-items: center;
@@ -305,19 +201,8 @@ body {
   cursor: pointer;
 }
 
-/* Tamaño LARGE: carrusel primera fila */
-.gamecard--large .gamecard__img-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-/* Tamaño MEDIUM: carrusel segunda fila */
-.gamecard--medium .gamecard__img-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-/* Tamaño SMALL: sección juegos nuevos */
+.gamecard--large .gamecard__img-wrapper,
+.gamecard--medium .gamecard__img-wrapper,
 .gamecard--small .gamecard__img-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -413,7 +298,6 @@ body {
   opacity: 1;
 }
 
-/* Título dentro del overlay */
 .gamecard__title {
   color: white;
   font-size: 13px;
@@ -422,7 +306,6 @@ body {
   padding: 0 8px;
 }
 
-/* Botón "Jugar" dentro del overlay */
 .gamecard__play-btn {
   background-color: var(--color-accent);
   color: #111;
@@ -439,7 +322,7 @@ body {
   background-color: var(--color-accent-hover);
 }
 
-/* Nombre debajo de la tarjeta (solo size small) */
+/* Nombre debajo (solo size small) */
 .gamecard__name {
   margin-top: 6px;
   font-size: 12px;
@@ -451,267 +334,64 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE — pantallas grandes a pequeñas
+   RESPONSIVE
    ============================================ */
 
-/* Tablets grandes y pantallas medianas (1024px y menores) */
 @media (max-width: 1024px) {
   .feed__featured-row--top {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .feed__featured-row--bottom {
     grid-template-columns: repeat(5, 1fr);
   }
-
-.results-section h2,
-.info-section h2 {
-  margin-top: 0;
-  color: #333;
-  border-bottom: 2px solid #667eea;
-  padding-bottom: 15px;
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.result-card {
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
-  transition: all 0.3s ease;
-}
-
-.result-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-}
-
-.result-card h3 {
-  margin: 0 0 8px 0;
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.result-card p {
-  margin: 0;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.no-results-message {
-  text-align: center;
-  color: #999;
-  padding: 20px;
-  font-style: italic;
-}
-
-.info-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0 0;
-}
-
-.info-section li {
-  padding: 10px 0;
-  color: #555;
-  font-size: 1rem;
-  text-align: left;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .app-header h1 {
-    font-size: 2rem;
-  }
-
-  .app-main {
-    padding: 15px;
-    gap: 20px;
-  }
-
-  .search-section,
-  .results-section,
-  .info-section {
-    padding: 20px;
-  }
-
-  .results-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .app-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-
-  .app-header {
-    padding: 30px 15px 20px;
-  }
-
-  .app-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
-  .app-main {
-    padding: 10px;
-  }
-
-  .search-section,
-  .results-section,
-  .info-section {
-    padding: 15px;
-    border-radius: 8px;
   .feed__new-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-
-  .app__sidebar-placeholder {
-    width: 50px;
-    font-size: 9px;
-  }
 }
 
-/* Tablets (768px y menores) */
 @media (max-width: 768px) {
   .feed__featured-row--top {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .feed__featured-row--bottom {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .feed__new-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .feed__new-games {
     padding: 16px 12px;
   }
-
   .feed__featured {
     padding: 10px;
   }
-
-  .feed__section-title h2 {
-    font-size: 14px;
-  }
 }
 
-/* Móviles grandes (600px y menores) */
 @media (max-width: 600px) {
-  :root {
-    --sidebar-width: 0px;
-  }
-
-  .app__sidebar-placeholder {
-    display: none;
-  }
-
   .feed__featured-row--top {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .feed__featured-row--bottom {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .feed__new-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .feed__featured {
-    padding: 8px;
-    gap: 6px;
-  }
-
-  .feed__featured-row--top,
-  .feed__featured-row--bottom {
-    gap: 6px;
-  }
-
-  .feed__new-games {
-    padding: 12px 8px;
-  }
-
-  .feed__section-title h2 {
-    font-size: 13px;
-  }
-
-  .gamecard__name {
-    font-size: 11px;
-  }
-
-  .feed__section-count {
-    font-size: 12px;
-    padding: 2px 8px;
-  }
 }
 
-/* Móviles pequeños (480px y menores) */
 @media (max-width: 480px) {
   .feed__featured-row--top {
     grid-template-columns: repeat(1, 1fr);
   }
-
   .feed__featured-row--bottom {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .feed__new-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .feed__featured {
-    padding: 6px;
-  }
-
-  .feed__featured-row--top,
-  .feed__featured-row--bottom {
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-
-  .feed__new-grid {
-    gap: 10px;
-  }
-
-  .feed__new-games {
-    padding: 10px 6px;
-  }
-
   .feed__section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-  }
-
-  .feed__section-title h2 {
-    font-size: 12px;
-  }
-
-  .gamecard__title {
-    font-size: 12px;
-  }
-
-  .gamecard__play-btn {
-    padding: 4px 12px;
-    font-size: 11px;
-  }
-
-  .feed__show-more-btn {
-    padding: 8px 20px;
-    font-size: 12px;
   }
 }
