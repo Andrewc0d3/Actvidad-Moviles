@@ -54,7 +54,7 @@ function Header() {
                 <nav className="nav">
                     <div className="nav-left">
                         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}></button>
-                        <img src="https://s3.minijuegosgratis.com/media/brand/minijuegos-logo.png?v=_1772347909" alt="Minijuegos" />
+                        <a href='/workspaces/Actvidad-Moviles/proyecto/src/App.jsx'><img src="https://s3.minijuegosgratis.com/media/brand/minijuegos-logo.png?v=_1772347909" alt="Minijuegos" /></a>
                     </div>
 
                     <div className="nav-center">
